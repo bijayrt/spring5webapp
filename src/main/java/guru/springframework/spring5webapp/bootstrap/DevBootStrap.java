@@ -30,9 +30,13 @@ public class DevBootStrap implements ApplicationListener<ContextRefreshedEvent> 
 
     private void initData() {
         Publisher worx = new Publisher("Workx");
+        worx.setAddress("1855 Folsom St");
+        worx.setCity("San Francisco");
         publisherRepository.save(worx);
 
         Publisher adw = new Publisher("Addison Wesley");
+        adw.setAddress("654 Minnesota St.");
+        adw.setCity("San Francisco");
         publisherRepository.save(adw);
 
         Author eric = new Author("Eirc", "Event");
